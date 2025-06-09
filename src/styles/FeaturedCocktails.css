@@ -1,0 +1,91 @@
+:root {
+    --bg: #fffdf8;
+    --text: #1a1a1a;
+    --card-bg: #fff;
+    --overlay-bg: rgba(255, 255, 255, 0.9);
+    --shadow: rgba(0, 0, 0, 0.2);
+  }
+  
+  body.dark-mode {
+    --bg: #111;
+    --text: #f1f1f1;
+    --card-bg: #1c1c1c;
+    --overlay-bg: rgba(30, 30, 30, 0.9);
+    --shadow: rgba(255, 255, 255, 0.05);
+  }
+  
+  .featured-cocktails {
+    padding: 4rem 2rem;
+    background-color: var(--bg);
+    color: var(--text);
+    text-align: center;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  
+  .featured-cocktails h2 {
+    font-size: 2.8rem;
+    margin-bottom: 2.5rem;
+    font-weight: 800;
+  }
+  
+  .cocktail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+  
+  .cocktail-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px var(--shadow);
+    background-color: var(--card-bg);
+    transition: transform 0.3s ease;
+  }
+  
+  .cocktail-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .cocktail-card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--overlay-bg);
+    color: var(--text);
+    padding: 1.2rem;
+    text-align: left;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+  }
+  
+  .cocktail-card:hover .overlay {
+    transform: translateY(0);
+  }
+  
+  .overlay h3 {fe
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem;
+  }
+  
+  .overlay p {
+    margin: 0;
+    font-weight: 500;
+  }
+  
+  .overlay span {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: var(--text);
+  }
+  

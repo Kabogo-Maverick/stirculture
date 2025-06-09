@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap');
+
+:root {
+  --bg-light: #ffffff;
+  --bg-dark: #121212;
+
+  --card-light: #f9f9f9;
+  --card-dark: #1e1e1e;
+
+  --text-light: #222;
+  --text-dark: #eee;
+
+  --muted-light: #666;
+  --muted-dark: #bbb;
+
+  --btn-bg: #333;
+  --btn-text: white;
+
+  --btn-hover-bg: #555;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* Gallery Container */
+.event-gallery {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+/* Title */
+.event-gallery h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: inherit;
+}
+
+/* Category Buttons */
+.category-buttons {
+  margin-bottom: 2rem;
+}
+
+.category-buttons button {
+  font-family: inherit;
+  margin: 0 10px;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.category-buttons button:hover,
+.category-buttons .active {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+}
+
+/* Cards Grid */
+.events-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Card */
+.event-card {
+  background: var(--card-light);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+body.dark-mode .event-card {
+  background: var(--card-dark);
+}
+
+/* Card Hover */
+.event-card:hover {
+  transform: scale(1.03);
+}
+
+/* Card Image */
+.event-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Card Details */
+.event-details {
+  padding: 1.2rem;
+  text-align: left;
+}
+
+.event-details h3 {
+  font-size: 1.5rem;
+  color: inherit;
+  margin-bottom: 0.5rem;
+}
+
+.event-details p {
+  font-size: 1rem;
+  color: var(--muted-light);
+  margin-bottom: 0.8rem;
+}
+
+body.dark-mode .event-details p {
+  color: var(--muted-dark);
+}
+
+/* Tag */
+.tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  background: var(--btn-bg);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+}

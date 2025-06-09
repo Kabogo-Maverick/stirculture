@@ -1,0 +1,116 @@
+:root {
+    --bg-light: #fefefe;
+    --bg-dark: #1e1e1e;
+    --text-light: #1e1e1e;
+    --text-dark: #f0f0f0;
+    --card-light: #fff;
+    --card-dark: #2c2c2c;
+  }
+  
+  body[data-theme='light'] {
+    --bg: var(--bg-light);
+    --text: var(--text-light);
+    --card: var(--card-light);
+  }
+  
+  body[data-theme='dark'] {
+    --bg: var(--bg-dark);
+    --text: var(--text-dark);
+    --card: var(--card-dark);
+  }
+  
+  .menu-print {
+    background: var(--bg);
+    color: var(--text);
+    padding: 3rem 2rem;
+    font-family: "Georgia", serif;
+  }
+  
+  .menu-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+  }
+  
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .menu-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .menu-img-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .menu-img-price img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    opacity: 0.9;
+  }
+  
+  .menu-price {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #e637e0;
+    white-space: nowrap;
+  }
+  
+  .menu-text {
+    padding: 0 1rem 1.5rem 1rem;
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-name {
+    text-align: center;
+    margin: 0.7rem 0 0.2rem 0;
+    font-size: 1.4rem;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .menu-ingredients {
+    font-size: 0.95rem;
+    text-align: center;
+    color: var(--text);
+    opacity: 0.85;
+    font-style: italic;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .menu-img-price {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .menu-price {
+      align-self: flex-end;
+    }
+  
+    .menu-card {
+      text-align: center;
+    }
+  }
+  

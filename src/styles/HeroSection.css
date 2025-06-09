@@ -1,0 +1,95 @@
+/* src/components/HeroSection.css */
+
+.hero-section {
+    background: url("/images/cock4.jpeg") center/cover no-repeat;
+    height: 100vh;
+    position: relative;
+    color: var(--text-color);
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-overlay {
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+  }
+  
+  .hero-content {
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+    max-width: 800px;
+  }
+  
+  .hero-title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--text-color);
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: var(--text-color);
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .hero-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #111;
+    border: none;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s ease;
+  }
+  
+  .hero-btn.alt {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  .hero-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Dark Mode Support */
+  body.dark-mode .hero-title,
+  body.dark-mode .hero-subtitle {
+    color: #fff;
+  }
+  
+  body.dark-mode .hero-btn {
+    background-color: #fff;
+    color: #111;
+  }
+  
+  body.dark-mode .hero-btn.alt {
+    background-color: #333;
+    color: #fff;
+  }
+  
